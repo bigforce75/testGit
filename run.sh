@@ -38,34 +38,34 @@ case $1 in
 
 	start)
 		sh prom_shell.sh start
-        sh graf_shell.sh start
-        ;;
+    sh graf_shell.sh start
+    ;;
 
 	stop)
 		sh prom_shell.sh stop
-        sh graf_shell.sh stop
-        ;;
+    sh graf_shell.sh stop
+    ;;
 
 	redeploy)
 		sh prom_shell.sh redeploy
 		sleep 1
-        sh graf_shell.sh redeploy
-        ;;
+    sh graf_shell.sh redeploy
+    ;;
 
 	reload)
-	    sh prom_shell reload
+	  sh prom_shell reload
 		;;
 
 	status)
-	    sh prom_shell.sh check
-        sh graf_shell.sh check
-	    ;;
+	  sh prom_shell.sh check
+    sh graf_shell.sh check
+	  ;;
 
 	-h|--help)
 		menu
-        ;;
+    ;;
 
 	*)
-	    echo -e "try './run.sh --help' or './run.sh -h' for more information"
+	  echo -e "try './run.sh --help' or './run.sh -h' for more information"
 		;;
 esac
